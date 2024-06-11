@@ -1,0 +1,86 @@
+<div class="col-md-7">
+          <div class="card my-4" id="task-result">
+            <div class="card-body">
+              <ul id="container-fluid"></ul>
+            </div>
+          </div>
+
+          <table class="table table-bordered table-sm">
+            <thead>
+              <tr>
+                <td class="text-center">EXP</td>
+                <td class="text-center">NOMBRE</td>
+                <td class="text-center">DIRECCION</td>
+                <td class="text-center">LAT</td>
+                <td class="text-center">LONG</td>
+                <td class="text-center">DELEGACION</td>
+                <td class="text-center">MUNICIPIO</td>
+                <td class="text-center">DENUNCIA</td>
+                <td class="text-center">CLAUSURA</td>
+                <td class="text-center">FECHA</td>
+                <td class="text-center">INICIO</td>
+                <td class="text-center">FIN</td>
+              </tr>
+            </thead>
+            <tbody id="tasks"></tbody>
+          </table>
+        </div>
+
+
+
+        <!--TIPOS DE DENUNCIA OPCIONES-->      
+        <div>
+            <label for="">TIPO DE DENUNCIA</label>
+          </div>
+          <div class="form-check  col-md-3">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              ATM
+            </label>
+          </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+              RUIDO
+            </label>
+
+          </div>
+          <div class="form-check  col-md-3">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              AGUA
+            </label>
+          </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+              RESIDUOS
+            </label>
+          </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+              IMPACTO AMBIENTAL
+            </label>
+          </div>
+
+
+
+          <div class="col-md-2">
+            <label for="horainicio" class="form-label">Hora Inicio: </label>
+            <input required type="time" class="form-control" id="horainicio" name="horainicio">
+          </div>
+          <div class="col-md-2">
+            <label for="horafinal" class="form-label">Hora Final: </label>
+            <input required type="time" class="form-control" id="horafinal" name="horafinal">
+          </div>
+
+
+
+          "indentRainbow.colors": [
+        
+        "rgba(255,255,64,0.07)",
+        "rgba(127,255,127,0.07)",
+        "rgba(255,127,255,0.07)",
+        "rgba(79,236,236,0.07)"
+    ]

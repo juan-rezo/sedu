@@ -1,0 +1,59 @@
+   /*
+  $('#task-result').hide();//oculta input apartir de un id html
+  fetchTasks();
+  let edit = false;
+
+  $('#search').keyup(() => { //keyup captura cada tecla precionada
+    if ($('#search').val()) { //si diferente avacio hacer
+      let search = $('#search').val(); // pada el valor del id a la variable
+      $.ajax({
+        url: 'php/buscar-tarea.php',
+        data: { search }, //es la informacion que esta en la variable searchi  antes definida
+        type: 'POST',
+        //respuesta
+        success: function (response) {
+          if (!response.error) { // si no hay ningun error hacer
+            let tasks = JSON.parse(response);
+            let template = ``;
+            tasks.forEach((task) => {
+              template += `<li class="task-item">${task.name}</li>`;
+            });
+            $('#task-result').show();
+            $('#container').html(template);
+          }
+        },
+      });
+    }
+  });*/
+//console.log("hola");
+
+
+
+  $(document).on('click', '.task-delete', () => {
+    if (confirm('¿Seguroski que quieres eliminar esa tarea?')) {
+      const element = $(this)[0].activeElement.parentElement.parentElement;
+      const id = $(element).attr('taskId');
+      $.post('php/eliminar-tarea.php', { id }, () => {
+        fetchTasks();
+      });
+    }
+  });
+
+  $(document).on('click', '.task-item', () => {
+    const element = $(this)[0].activeElement.parentElement.parentElement;
+    const id = $(element).attr('taskId');
+    let url = 'php/obtener-una-tarea.php';
+    $.ajax({
+      url,
+      data: { id },
+      type: 'POST',
+      success: function (response) {
+        if (!response.error) {
+          const task = JSON.parse(response);
+          $('#name').val(task.name);
+          $('#description').val(task.description);
+          $('#taskId').val(task.id);
+          edit = true;
+       }
+     }
+    });
