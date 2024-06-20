@@ -56,7 +56,7 @@
                     <option value="4">Parral</option>
                   </select>
                 </div>
-                <hr width="75%" />
+                
                 <div class="col-md-3">
                   <label for="denuncia" class="form-label">DENUNCIA</label>
                   <select id="s_denuncia" class="form-select" name="s_denuncia">
@@ -72,10 +72,6 @@
                   <label for="fechaorden" class="form-label">FECHA DE ORDEN </label>
                   <input type="date" class="form-control" id="fechaorden" name="fechaorden">
                 </div>
-
-                
-                <hr width="75%" />
-          
 
 
                 <div class="col-12">
@@ -99,8 +95,9 @@
             </div>
 
           </div>
-          <table class="table table-primary table-bordered borded-primary table-sm">
-            <thead>
+          <table class="table  table-bordered">
+            <!--<thead class="thead-dark">-->
+          <thead> 
               <tr>
                 <th scope="col" class="text-center">ARCHI</th>
                 <th scope= "col" class="text-center">EMPRESA</th>
@@ -108,30 +105,16 @@
                 <th scope= "col" class="text-center">MUNICIPIO</th>
                 <th scope= "col" class="text-center">DENUNCIA</th>
                 <th scope= "col" class="text-center">FECHA ORDEN</th>
-                <th scope= "col" class="text-center" colspan="2">ACCIONES</th>
+                <th  colspan="5" scope= "col" class="text-center">ACCIONES</th>
               </tr>
-            </thead>
+          </thead>
             <tbody id="tasks">
-              <h1>aqui se inyecto</h1>
-              <!--<tr class="table-light" id="rowtable">-->
-                  <!--**********************************BOTONES DE ACCION***********************************************************************-->
-                  <!--<td>-->
-                    <!-- Button trigger modal -->
-                 <!--   <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                      <img class="rounded float-left"id="icono" src="./icon/pngegg.png" alt="" height= "16px">
-                    </button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                      <img class="rounded float-right"id="icono" src="./icon/editar.png" alt="" height="16px" >
-                    </button>
-
-
-                  </td>-->
-                  <!--/***************************************************************** */-->
-              <!--</tr>-->
-
+             
             </tbody>
           </table>
     </div>
+    
+<?php
+ include ("footer.php");
+?>
     

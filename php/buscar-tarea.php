@@ -4,7 +4,7 @@ include("database.php");
 //echo "laterea se busco correctamente";
 
 
- $search = $_POST["search"];
+ $search = $_POST["search"]; // desde data:{search}
 
 if(!empty($search)) {
     $query = "SELECT * FROM inspecciones_temp WHERE archivistica LIKE '$search%'";
@@ -14,12 +14,11 @@ if(!empty($search)) {
         die("Hubo un error en la consulta". mysqli_error($connecction));
     }
 
-    $json = array();
+    $json = array(); //se crea el arreglo json
 
     while($row = mysqli_fetch_array($result)){
         $json[] = array(
             "idinspecciontemp"=>$row["idinspecciontemp"],
-            
             "archivistica"=>$row["archivistica"],
             "empresa"=>$row["empresa"],
             "direccion"=>$row["direccion"],
@@ -31,7 +30,7 @@ if(!empty($search)) {
             "fecha"=>$row["fecha"]
         );
     }
-    $jsonstring = json_encode($json);
+    $jsonstring = json_encode($json); // devuelve a ajax en formato json
     echo $jsonstring;
 } //print_r($json);
 ?>
